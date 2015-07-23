@@ -10,5 +10,24 @@ both = ['client','server'];
 
 Package.onUse(function(api) {
     api.versionsFrom('1.1.0.2');
-    api.addFiles('wsl-settings.js');
+
+    api.use(['heaven7:wsl-core'], both);
+    api.imply(['heaven7:wsl-core']);
+
+    api.addFiles([
+        'lib/both/settings.js',
+        'lib/both/schemas.js',
+        'lib/both/config.js',
+        'lib/both/router.js',
+    ], both);
+
+    api.addFiles([
+        'lib/client/templates.html',
+        'lib/client/templates.js',
+        'lib/client/config.js'
+    ], 'client');
+
+    api.addFiles([
+        'lib/server/publish.js'
+    ], 'server');
 });
