@@ -30,4 +30,6 @@ Package.onUse(function(api) {
     api.addFiles([
         'lib/server/publish.js'
     ], 'server');
+
+    api.export('Settings', both);
 });
