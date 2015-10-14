@@ -18,7 +18,7 @@ Package.onUse(function(api) {
         'lib/both/settings.js',
         'lib/both/schemas.js',
         'lib/both/config.js',
-        'lib/both/router.js',
+        'lib/both/router.js'
     ], both);
 
     api.addFiles([
