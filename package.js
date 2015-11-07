@@ -1,6 +1,6 @@
 Package.describe({
   name: 'heaven7:wsl-settings',
-  version: '0.0.1',
+  version: '0.0.2',
   summary: 'Settings package',
   git: 'https://github.com/heaven7/wsl-settings.git',
   documentation: 'README.md'
@@ -9,9 +9,9 @@ Package.describe({
 both = ['client','server'];
 
 Package.onUse(function(api) {
-    api.versionsFrom('1.1.0.2');
+    api.versionsFrom('1.2');
 
-    api.use(['heaven7:wsl-core@0.0.1'], both);
+    api.use(['heaven7:wsl-core@0.0.2'], both);
     api.imply(['heaven7:wsl-core']);
 
     api.addFiles([
