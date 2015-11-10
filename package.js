@@ -28,6 +28,7 @@ Package.onUse(function(api) {
     ], 'client');
 
     api.addFiles([
+        'lib/server/startup.js',
         'lib/server/publish.js'
     ], 'server');
 
