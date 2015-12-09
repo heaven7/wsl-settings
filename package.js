@@ -24,12 +24,14 @@ Package.onUse(function(api) {
     api.addFiles([
         'lib/client/templates.html',
         'lib/client/templates.js',
-        'lib/client/config.js'
+        'lib/client/config.js',
+        'lib/client/hooks.js'
     ], 'client');
 
     api.addFiles([
         'lib/server/startup.js',
-        'lib/server/publish.js'
+        'lib/server/publish.js',
+        'lib/server/allow.js'
     ], 'server');
 
     api.export('Settings', both);
