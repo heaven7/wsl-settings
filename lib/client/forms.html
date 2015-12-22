@@ -1,0 +1,11 @@
+<template name="settingsForm">
+    {{#autoForm collection="Settings" doc=settings type="update" id="projectSettingsForm" }}
+        {{> afQuickField name='public' checkboxType="toggle"}}
+        {{> afQuickField name='watchable' checkboxType="toggle"}}
+        {{> afQuickField name='commentable' checkboxType="toggle"}}
+        {{> afQuickField name='shareable' checkboxType="toggle"}}
+        {{> afQuickField name='doc' value=doc type="hidden"}}
+        {{> afQuickField name='docType' value=docType type="hidden"}}
+        {{> formUpdateActions id="submitUpdate"}}
+    {{/autoForm}}
+</template>

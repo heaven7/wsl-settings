@@ -22,6 +22,8 @@ Package.onUse(function(api) {
     ], both);
 
     api.addFiles([
+        'lib/client/forms.html',
+        'lib/client/forms.js',
         'lib/client/templates.html',
         'lib/client/templates.js',
         'lib/client/config.js',
