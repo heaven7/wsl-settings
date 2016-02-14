@@ -1,18 +1,23 @@
 Package.describe({
   name: 'heaven7:wsl-settings',
-  version: '0.0.3',
+  version: '0.0.3_1',
   summary: 'Settings package',
   git: 'https://github.com/heaven7/wsl-settings.git',
   documentation: 'README.md'
 });
 
-both = ['client','server'];
+both = ['client','server'],
+    packages = [
+        'heaven7:wsl-core@0.0.3_1',
+        'ecmascript',
+        'es5-shim'
+    ];
 
 Package.onUse(function(api) {
     api.versionsFrom('1.2');
 
-    api.use(['heaven7:wsl-core@0.0.3'], both);
-    api.imply(['heaven7:wsl-core']);
+    api.use(packages, both);
+    api.imply(packages);
 
     api.addFiles([
         'lib/both/settings.js',
